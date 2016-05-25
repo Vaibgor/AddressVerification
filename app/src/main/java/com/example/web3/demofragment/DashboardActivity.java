@@ -34,9 +34,9 @@ public class DashboardActivity extends AppCompatActivity {
         SubActionButton button1 = itemBuilder.setContentView(itemIcon).build();
     }
     FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
-            .addSubActionView(button1)
+            /*.addSubActionView(button1)
             .addSubActionView(button2)
             // ...
-            .attachTo(fab)
+            .attachTo(fab)*/
             .build();
 }
