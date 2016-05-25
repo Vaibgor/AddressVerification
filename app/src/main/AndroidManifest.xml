@@ -3,8 +3,8 @@
     package="com.example.web3.demofragment">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -26,13 +26,15 @@
         </activity>
 
         <service
-            android:name=".GPS.GPSTracker"
+            android:name=".GPSTracker"
             android:enabled="true"
             android:exported="true" />
-        <service
-            android:name=".GPS.GPSTrackingService"
-            android:enabled="true"
-            android:exported="true"></service>
+
+        <activity android:name=".AndroidDatabaseManager" />
+        <activity
+            android:name=".DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

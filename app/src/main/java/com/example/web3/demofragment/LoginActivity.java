@@ -4,6 +4,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
@@ -22,6 +26,9 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -29,9 +36,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.TextView;
-
-import com.example.web3.demofragment.GPS.GPSTrackingService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +78,20 @@ Button button;
         setContentView(R.layout.activity_login);
          button =(Button)findViewById(R.id.email_sign_in_button);
         button.setOnClickListener(this);
+
+        // handle GPS data\
+
+        GPSTracker gps = new GPSTracker(this);
+
+        if(gps.canGetLocation()) { // gps enabled} // return boolean true/false
+            gps.getLatitude(); // returns latitude
+            gps.getLongitude(); // returns longitude
+        }else{
+            // can't get location
+            // GPS or Network is not enabled
+            // Ask user to enable GPS/network in settings
+            gps.showSettingsAlert();
+        }
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -98,8 +118,17 @@ Button button;
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+       /* if (!isMyGPSTrackerServiceRunning()) {
+            startService(new Intent(getApplicationContext(), GPSTrackingService.class));
+            //Log.i("reminderp pop up",String.valueOf());
+        }*/
+    }
     private boolean isMyGPSTrackerServiceRunning() {
         ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo service : manager
@@ -111,14 +140,7 @@ Button button;
         }
         return false;
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (!isMyGPSTrackerServiceRunning()) {
-            startService(new Intent(getApplicationContext(), GPSTrackingService.class));
-            //Log.i("reminderp pop up",String.valueOf());
-        }
-    }
+
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
             return;
@@ -161,8 +183,6 @@ Button button;
             }
         }
     }
-
-
     /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
@@ -313,7 +333,6 @@ Button button;
 
     }
 
-
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
@@ -323,7 +342,6 @@ Button button;
         int ADDRESS = 0;
         int IS_PRIMARY = 1;
     }
-
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
@@ -379,6 +397,27 @@ Button button;
             mAuthTask = null;
             showProgress(false);
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    /**
+     * On selecting action bar icons
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Take appropriate action for each action item click
+        switch (item.getItemId()) {
+            case R.id.viewDatabase:
+                // search action
+                Intent intent= new Intent(LoginActivity.this, AndroidDatabaseManager.class);
+                startActivity(intent);
+                return true;
+        }
+        return true;
     }
 }
 
