@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/background1">
+
+    <ScrollView
+        android:id="@+id/mSvCreditRating"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:text="--Address Confirmation--"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#3d1010" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlAddConfLay">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Address Confirm"
+                        android:textColor="#3d1010" />
+
+                    <FrameLayout
+                        android:id="@+id/mFmlAddConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp">
+
+                        <Spinner
+                            android:id="@+id/mSpiAddConfirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/report_edittext"
+                            android:hint="Issue"
+                            android:paddingLeft="10dp" />
+
+                        <ImageView
+                            android:id="@+id/mImgvAddConfirm"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="#3d1010"
+                            android:padding="16dp"
+                            android:src="@android:drawable/arrow_down_float" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlContPersonLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Contact Person"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLContPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiContPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Contact Person"
+                        android:paddingLeft="10dp"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvContPerson"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                <EditText
+                    android:id="@+id/mEtOtherContPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Other contact person"
+                    android:textColor="#3d1010"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlConneAppLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Connection Applied"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLConneApplied"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiConneApplied"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Connection Applied"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvConneApplied"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mLlAVStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="AV Status"
+                        android:textColor="#3d1010" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/report_edittext"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:id="@+id/mTvAVStatus"/>
+                    <FrameLayout
+                        android:id="@+id/mFmlAVStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp">
+
+                        <Spinner
+                            android:id="@+id/mSpiAVStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/report_edittext"
+                            android:hint="Issue"
+                            android:paddingLeft="10dp" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="#3d1010"
+                            android:padding="16dp"
+                            android:src="@android:drawable/arrow_down_float" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlAVDescription">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="AV Description"
+                        android:textColor="#3d1010" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/report_edittext"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/mTvAVDescription"/>
+                    <FrameLayout
+                        android:id="@+id/mFmLNegative"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp">
+
+                        <Spinner
+                            android:id="@+id/mSpiNegative"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/report_edittext"
+                            android:hint="Contact Person"
+                            android:paddingLeft="10dp"
+                            android:textSize="30dp" />
+
+                        <ImageView
+                            android:id="@+id/mImgvNagative"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="#3d1010"
+                            android:padding="16dp"
+                            android:src="@android:drawable/arrow_down_float" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:id="@+id/mFmLReject"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp">
+
+                        <Spinner
+                            android:id="@+id/mSpiReject"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/report_edittext"
+                            android:hint="Contact Person"
+                            android:paddingLeft="10dp"
+                            android:textSize="30dp" />
+
+                        <ImageView
+                            android:id="@+id/mImgvReject"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="#3d1010"
+                            android:padding="16dp"
+                            android:src="@android:drawable/arrow_down_float" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlSIMCardLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="SIM card Receipt"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLCardReceipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiCardReceipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="SIM Card Receipt"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvCardReceipt"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="--Customer Profile--"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#3d1010"
+                    android:layout_marginTop="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlOwnerShipLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Ownership of House"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLOwnership"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiOwnership"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Ownership of House"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvOwnership"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlOrganizationLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Organization"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLOrganization"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiOrganization"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Organization"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvOrganization"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlProfServiceLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Profession/Service"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiProfession"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Profession"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvProfession"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlYearServiceLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Years of Service"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLYrsService"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiYrsService"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Years of service"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvYrsService"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlFmlyStructLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Family Structure"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLFamilyStruct"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiFamilyStruct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Family Structure"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvFamilyStruct"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlThirdPartyLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Third Party Contact"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLThirdParty"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiThirdParty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Third Party contact"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvThirdParty"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlDocShown">
+                <EditText
+                    android:id="@+id/mEtDocShown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Document shown*_ _"
+                    android:textColor="#3d1010"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginTop="5dp"/>
+                <EditText
+                    android:id="@+id/mEtDoorColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Door color*_ _"
+                    android:textColor="#3d1010"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginTop="5dp"/>
+                <EditText
+                    android:id="@+id/mEtLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Landmark*_ _"
+                    android:textColor="#3d1010"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/mLlException">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Exception"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLException"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiException"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Third Party contact"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="--Field Observation--"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#3d1010"
+                    android:layout_marginTop="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlHouseApproachLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Approach to House"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLHouseApproach"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiHouseApproach"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Approach to House"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvHouseApproach"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlHouseLocationLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Location of House"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLHouseLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiHouseLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Location of House"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvHouseLocation"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlLocalityLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Locality of House"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLHouseLocality"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiHouseLocality"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Locality of House"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvHouseLocality"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mLlResidTypeLay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Type of Residency"
+                    android:textColor="#3d1010" />
+
+                <FrameLayout
+                    android:id="@+id/mFmLResidencyType"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/mSpiResidencyType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/report_edittext"
+                        android:hint="Type of Residency"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:id="@+id/mImgvResidencyType"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="#3d1010"
+                        android:padding="16dp"
+                        android:src="@android:drawable/arrow_down_float" />
+                </FrameLayout>
+                    </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comment *"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#000"/>
+            <FrameLayout
+                android:id="@+id/mFmLRemark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:id="@+id/mEtCRatingRemark"
+                    android:background="@drawable/edittext_shape"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:lines="3"/>
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:id="@+id/sliding_text_marquee"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="#FFFF404A"
+                android:ellipsize="marquee"
+                android:text="                                                    Select all parameter to submit Credit Rating report             "
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/green_button"
+                android:id="@+id/mBtnCreditRating"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Check Credit Rating"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

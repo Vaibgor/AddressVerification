@@ -1,4 +1,4 @@
-package com.example.web3.demofragment;
+package com.example.web3.add_verification.GPS;
 
 import android.Manifest;
 import android.annotation.TargetApi;

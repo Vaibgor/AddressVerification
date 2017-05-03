@@ -1,4 +1,4 @@
-package com.example.web3.demofragment;
+package com.example.web3.add_verification;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
